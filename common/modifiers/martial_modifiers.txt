@@ -1,0 +1,45 @@
+early_martial_training = {
+    martial = 3
+    learning = 1
+    prowess = 2
+    diplomacy = 5
+
+    monthly_martial_lifestyle_xp_gain_mult = 0.5
+    desc= early_martial_training_desc
+    icon = camp_positive
+}
+
+opinion_disappointed_in_self={
+    martial = -3
+    learning = -1
+    prowess = -2
+    monthly_martial_lifestyle_xp_gain_mult = -0.5
+    desc = opinion_disappointed_in_self_desc
+    icon = martial_negative
+}
+
+physical_focus = {
+    prowess = 8
+    knight_effectiveness_mult = 0.15
+    movement_speed = 0.05
+    icon = camp_positive
+    desc= physical_focus_desc
+}
+mental_martial_focus = {
+    stewardship = 2
+    learning = 2
+    monthly_piety = 0.
+    icon = martial_positive
+    desc = mental_martial_focus_desc
+    
+}
+martial_training_focus = {
+    martial = 5
+    learning = 5
+    diplomacy = 5
+    prowess = 5
+    monthly_martial_lifestyle_xp_gain_mult = 0.15
+    desc = martial_training_focus_desc
+    icon = martial_positive
+}
+

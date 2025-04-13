@@ -1,0 +1,16 @@
+﻿l_spanish:
+  #modifiers
+  #evento 1
+  early_martial_training: "Que comience mi camino"
+  early_martial_training_desc: "Este personaje ha comenzado a entrenar"
+
+  martial_training_focus: "Enfocado en el Entrenamiento Marcial"
+  martial_training_focus_desc: "Este personaje ha intensificado su entrenamiento militar, mejorando su marcialidad, temple y claridad mental."
+
+  mental_martial_focus: "Enfocado en la mentalidad Marcial"
+  mental_martial_focus_desc: "Este personaje ha perfeccionado su enfoque mental para la guerra."
+
+  physical_focus: "Enfocado en la fuerza física"
+  physical_focus_desc: "Este personaje ha completado un entrenamiento físico exhaustivo."
+
+  

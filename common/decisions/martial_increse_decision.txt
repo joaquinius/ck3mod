@@ -1,0 +1,201 @@
+first_level_martial_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = martial_group_type
+	desc = first_level_martial_decision_desc
+	selection_tooltip = first_level_martial_selection_tooltip
+	effect_tooltip = first_level_martial_effect_tooltip
+	confirm_text = first_level_martial_confirm_text
+	ai_check_frequency = 0
+
+	is_shown = {
+		NOT = {
+			has_trait = education_martial_2
+		}
+		NOT = {
+			has_trait = education_martial_3
+		}
+		NOT = {
+			has_trait = education_martial_4
+		}
+		NOT = {
+			has_trait = education_martial_5
+		}
+		is_ai = no
+		is_player = yes
+	}
+
+	ai_check_interval = 0
+
+	is_valid = {
+		prestige_level >= 2
+
+		learning >= 12
+
+		martial >= 12
+
+		has_trait = education_martial_1
+
+		OR = {
+			calc_true_if = {
+				amount >= 2
+				has_lifestyle = martial_lifestyle
+				has_trait = brave
+				has_trait = intellect_good_1
+			}
+		}
+	}
+	cost = {
+		gold = 250
+		prestige = 250
+	}
+	effect = {
+		custom_tooltip = first_level_martial_decision_reward_1
+		remove_trait = education_martial_1
+		add_trait = education_martial_2
+		trigger_event = {
+			id = martial_event_1.100
+		}
+	}
+}
+
+second_level_martial_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = martial_group_type
+	desc = second_level_martial_decision_desc
+	selection_tooltip = second_level_martial_selection_tooltip
+	effect_tooltip = second_level_martial_effect_tooltip
+	confirm_text = second_level_martial_confirm_text
+	ai_check_frequency = 0
+	is_shown = {
+		NOT = {
+			has_trait = education_martial_3
+		}
+		NOT = {
+			has_trait = education_martial_4
+		}
+		NOT = {
+			has_trait = education_martial_5
+		}
+		is_ai = no
+		is_player = yes
+	}
+	ai_check_interval = 0
+	is_valid = {
+		prestige_level >= 3
+		learning >= 15
+		martial >= 15
+		has_trait = education_martial_2
+		OR = {
+			calc_true_if = {
+				amount >= 2
+				has_lifestyle = martial_lifestyle
+				has_trait = strategist
+				prowess >= 20
+			}
+		}
+	}
+	cost = {
+		gold = 500
+		prestige = 500
+	}
+	effect = {
+		custom_tooltip = second_level_martial_decision_reward_1
+		remove_trait = education_martial_2
+		add_trait = education_martial_3
+	}
+}
+
+third_level_martial_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = martial_group_type
+	desc = third_level_martial_decision_desc
+	selection_tooltip = third_level_martial_selection_tooltip
+	confirm_text = third_level_martial_confirm_text
+	ai_check_frequency = 0
+	is_shown = {
+		NOT = {
+			has_trait = education_martial_4
+		}
+		NOT = {
+			has_trait = education_martial_5
+		}
+		is_ai = no
+		is_player = yes
+	}
+	ai_check_interval = 0
+	is_valid = {
+		prestige_level >= 4
+		learning >= 18
+		martial >= 20
+		has_trait = education_martial_3
+		OR = {
+			calc_true_if = {
+				amount >= 2
+				has_lifestyle = martial_lifestyle
+				prowess >= 25
+				has_trait = gallant
+			}
+		}
+	}
+	cost = {
+		gold = 750
+		prestige = 750
+	}
+	effect = {
+		custom_tooltip = third_level_martial_decision_reward_1
+		custom_tooltip = third_level_martial_decision_reward_2
+		remove_trait = education_martial_3
+		add_trait = education_martial_4
+	}
+}
+
+fourt_level_martial_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = martial_group_type
+	desc = fourt_level_martial_decision_desc
+	selection_tooltip = fourt_level_martial_selection_tooltip
+	confirm_text = fourt_level_martial_confirm_text
+	ai_check_frequency = 0
+	is_shown = {
+		NOT = {
+			has_trait = education_martial_5
+		}
+		is_ai = no
+		is_player = yes
+	}
+	ai_check_interval = 0
+	is_valid = {
+		prestige_level >= 4
+		learning >= 18
+		martial >= 20
+		has_trait = education_martial_4
+		OR = {
+			calc_true_if = {
+				amount >= 2
+				has_lifestyle = martial_lifestyle
+				prowess >= 25
+				has_trait = gallant
+				has_trait = strategic
+				has_trait = Overseer
+			}
+		}
+	}
+	cost = {
+		gold = 750
+		prestige = 750
+	}
+	effect = {
+		custom_tooltip = fourt_level_martial_decision_reward_1
+		custom_tooltip = fourt_level_martial_decision_reward_2
+		remove_trait = education_martial_4
+		add_trait = education_martial_5
+	}
+}

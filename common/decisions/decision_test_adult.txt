@@ -1,0 +1,11 @@
+﻿# forge_legendary_sword_decision = {
+#     desc = "Forjar una espada legendaria"
+    
+#     is_shown = {
+#         has_artifact_manufactory = yes  # Requiere un taller de artefactos
+#     }
+    
+#     effect = {
+#         add_artifact = my_custom_sword  # Añade el artefacto al personaje
+#     }
+# }

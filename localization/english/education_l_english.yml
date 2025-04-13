@@ -1,0 +1,19 @@
+﻿l_english:
+  my_custom_decision: "Reflexiona y fortalece tu mente"
+  my_custom_decision_desc: "Es tiempo de liberarte del estrés y convertirte en una mejor versión de ti mismo."
+  my_custom_decision_selection_tooltip: "Selecciona para ganar claridad mental."
+  my_custom_decision_effect_tooltip: "Reducirás el estrés y ganarás un rasgo positivo."
+  my_custom_decision_confirm_text: "Meditar ahora"
+  
+  
+
+  my_mod_event_title: "¡Evento funciona!"
+  my_mod_event_desc: "Has solucionado el error."
+  my_mod_event_option: "Continuar"
+  # my_mod_event_title: "Inspiración tras la meditación"
+  # my_mod_event_desc: "Luego de una profunda introspección, nuevas ideas florecen en tu mente."
+  # my_mod_event_option: "¡Estoy listo para actuar!"
+  # martial education
+  first_level_martial_decision: "Hola Mundo"
+  first_level_martial_decision_desc: "hola mundo"
+  first_level_martial_selection_tooltip: "Buy Education Martial Level 1"

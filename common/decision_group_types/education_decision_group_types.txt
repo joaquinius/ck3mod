@@ -1,0 +1,24 @@
+martial_group_type = {
+    sort_order = 299
+    gui_tags = { big_button }
+}
+
+diplomacy_group_type = {
+    sort_order = 300
+    gui_tags = { big_button }
+}
+
+intrigue_group_type = {
+    sort_order = 301
+    gui_tags = { big_button }
+}
+
+learning_group_type = {
+    sort_order = 302
+    gui_tags = { big_button }
+}
+
+stewardship_group_type = {
+    sort_order = 303
+    gui_tags = { big_button }
+}

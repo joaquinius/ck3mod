@@ -1,0 +1,36 @@
+﻿l_spanish:
+ 
+
+
+  first_level_martial_decision: "El Despertar del Acero"
+  first_level_martial_decision_desc: "He renunciado a la mediocridad. Desde ahora, mi vida será forjada con disciplina y acero. La conquista será mi propósito."
+  first_level_martial_selection_tooltip: "Comienza tu transformación: el camino marcial exige claridad y voluntad."
+  first_level_martial_confirm_text: "Afilen el acero, estoy listo para empuñarlo."
+  first_level_martial_decision_reward_1: "Cuando consigas completes el entrenamiento, ganarás el [trait|lE] #V [GetTrait('education_martial_2').GetName( GetNullCharacter )|l]#!"
+  #segundo nivel
+  second_level_martial_decision: "El Sendero de la Guerra"
+  second_level_martial_selection_tooltip: "Avanza por el sendero que sólo los valientes se atreven a recorrer."
+  second_level_martial_decision_desc: "He superado la instrucción básica. Cada batalla es una lección, y cada cicatriz, una marca de honor."
+  second_level_martial_confirm_text: "Que el campo de batalla me enseñe lo que aún ignoro."
+  
+  second_level_martial_decision_reward_1: "Cuando consigas completes el entrenamiento, ganarás el [trait|lE] #V [GetTrait('education_martial_3').GetName( GetNullCharacter )|l]#! "
+
+  # tercer nivel 
+  third_level_martial_decision: "El Arte del Guerrero"
+  third_level_martial_decision_desc: "Ya no lucho por aprender. Lucho por perfeccionar. Mis enemigos me temen, pero aún no he alcanzado mi cima."
+  third_level_martial_selection_tooltip: "Perfecciona tu técnica y haz del combate una forma de expresión."
+  third_level_martial_confirm_text: "Muéstrame el límite, y lo romperé."
+  third_level_martial_decision_reward_1: "Cuando consigas completes el entrenamiento, ganarás el [trait|lE] #V [GetTrait('education_martial_4').GetName( GetNullCharacter )|l]#!"
+  third_level_martial_decision_reward_2: "Pierdes el [trait|lE] #V [GetTrait('education_martial_3').GetName( GetNullCharacter )|l]#!"
+
+  fourt_level_martial_decision: "La Cumbre del Combate"
+  fourt_level_martial_decision_desc: "He trascendido la guerra. Soy uno con el filo, con la estrategia, con la voluntad de vencer."
+  fourt_level_martial_selection_tooltip: "Solo los verdaderos maestros conocen este sendero."
+  fourt_level_martial_confirm_text: "La guerra no me domina. Yo soy la guerra."
+  fourt_level_martial_decision_reward_1: "Cuando consigas completes el entrenamiento, ganarás el [trait|lE] #V [GetTrait('education_martial_5').GetName( GetNullCharacter )|l]#!"
+  fourt_level_martial_decision_reward_2: "Pierdes el [trait|lE] #V [GetTrait('education_martial_4').GetName( GetNullCharacter )|l]#!"
+
+ 
+  
+  
+  

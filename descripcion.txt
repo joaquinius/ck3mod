@@ -1,0 +1,4 @@
+objetivos del mod:
+con este mod busco que el personaje por ahora jugador pueda ir mejorando sus traits de educación en caso de que no sean el nivel máximo 
+para eso debo establecer los requisitos para que el personaje lo logre en cada uno de los estilos de vida ya que van ligados a la educación 
+primero debo hacer que funcionen por via de decisiones y luego se pueden agregar eventos que permitan hace alguna actividad o acción 
