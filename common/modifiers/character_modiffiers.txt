@@ -1,0 +1,9 @@
+confident_from_victory = {
+    prowess = 1
+    monthly_prestige = 0.5
+}
+
+humbled_by_defeat = {
+    learning = 1
+    monthly_piety = 0.3
+}

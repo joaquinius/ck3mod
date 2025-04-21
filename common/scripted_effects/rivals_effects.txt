@@ -1,0 +1,25 @@
+﻿create_practice_rival_effect = {
+    create_character = {
+        save_scope_as = duel_opponent
+        female = no
+        name = "Pepito"
+        gender = male
+        dynasty = none
+        culture = ROOT.culture
+        faith   = ROOT.faith
+        location= ROOT.location
+        age = { min = 20 max = 22 years_until_death = 5 }
+        diplomacy = { min = 4 max = 10 }
+        martial = { min = 8 max = 12 }
+        stewardship = { min = 4 max = 10 }
+        intrigue = { min = 4 max = 10 }
+        learning = { min = 4 max = 10 }
+        prowess = { min = 8 max = 12 }
+        traits = { add = brave add = duelist }
+        add_opinion = { target = root modifier = opinion_rival }
+        trait = duelist
+        after_creation = { add_to_list = rivals_list }
+    }
+}
+
+

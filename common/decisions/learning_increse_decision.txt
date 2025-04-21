@@ -1,0 +1,151 @@
+first_level_learning_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = learning_group_type
+	desc = first_level_learning_decision_desc
+	selection_tooltip = first_level_learning_selection_tooltip
+	effect_tooltip = first_level_learning_effect_tooltip
+	confirm_text = first_level_learning_confirm_text
+	ai_check_frequency = 0
+
+	is_shown = {
+		has_trait = education_learning_1
+		NOT = { has_trait = education_learning_2 }
+		NOT = { has_trait = education_learning_3 }
+		NOT = { has_trait = education_learning_4 }
+		NOT = { has_trait = education_learning_5 }
+		is_ai = no
+		is_player = yes
+	}
+	is_valid = {
+		prestige_level >= 2
+		learning >= 14
+		has_trait = education_learning_1
+		OR = {
+			calc_true_if = {
+				amount >= 2
+				has_lifestyle = learning_lifestyle
+				has_trait = wise
+				has_trait = intelligent
+			}
+		}
+	}
+	cost = {
+		gold = 250
+		prestige = 250
+	}
+	effect = {
+		custom_tooltip = first_level_learning_decision_reward_1
+		remove_trait = education_learning_1
+		add_trait = education_learning_2
+		trigger_event = {
+			id = learning_event_1.100
+		}
+	}
+}
+
+# NIVEL 2
+second_level_learning_decision = {
+
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = learning_group_type
+	desc = second_level_learning_decision_desc
+	selection_tooltip = second_level_learning_selection_tooltip
+	effect_tooltip = second_level_learning_effect_tooltip
+	confirm_text = second_level_learning_confirm_text
+	ai_check_frequency = 0
+
+
+	is_shown = {
+		has_trait = education_learning_2
+		NOT = { has_trait = education_learning_3 }
+	}
+	is_valid = {
+		piety_level >= 3
+		learning >= 14
+		gold >= 300
+		OR = {
+			has_trait = wise_man
+			has_trait = temperate
+		}
+	}
+	cost = {
+		gold = 300
+		piety = 300
+	}
+	effect = {
+		remove_trait = education_learning_2
+		add_trait = education_learning_3
+		trigger_event = { id = learning_event_2.100 }
+		# TODO: Añadir artefacto menor de aprendizaje (por ejemplo, "Manuscrito Antiguo")
+	}
+}
+
+# NIVEL 3
+third_level_learning_decision = {
+
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = learning_group_type
+	desc = third_level_learning_decision_desc
+	selection_tooltip = third_level_learning_selection_tooltip
+	effect_tooltip = third_level_learning_effect_tooltip
+	confirm_text = third_level_learning_confirm_text
+	ai_check_frequency = 0
+
+	is_shown = {
+		has_trait = education_learning_3
+		NOT = { has_trait = education_learning_4 }
+	}
+	is_valid = {
+		piety_level >= 3
+		learning >= 16
+		has_lifestyle = learning_lifestyle
+	}
+	cost = {
+		gold = 400
+		piety = 400
+	}
+	effect = {
+		remove_trait = education_learning_3
+		add_trait = education_learning_4
+		trigger_event = { id = learning_event_3.100 }
+		# TODO: Añadir artefacto intermedio de aprendizaje (por ejemplo, "Códice del Conocimiento")
+	}
+}
+
+# NIVEL 4
+fourth_level_learning_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = learning_group_type
+	desc = fourth_level_learning_decision_desc
+	selection_tooltip = fourth_level_learning_selection_tooltip
+	effect_tooltip = fourth_level_learning_effect_tooltip
+	confirm_text = fourth_level_learning_confirm_text
+	ai_check_frequency = 0
+
+	is_shown = {
+		has_trait = education_learning_4
+		NOT = { has_trait = education_learning_5 }
+	}
+	is_valid = {
+		piety_level >= 4
+		learning >= 18
+	}
+	cost = {
+		gold = 500
+		piety = 500
+	}
+	effect = {
+		remove_trait = education_learning_4
+		add_trait = education_learning_5
+		trigger_event = { id = learning_event_4.100 }
+		# TODO: Añadir artefacto legendario de aprendizaje (por ejemplo, "Grimorio del Sabio Eterno")
+	}
+}

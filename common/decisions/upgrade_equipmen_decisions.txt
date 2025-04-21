@@ -1,0 +1,37 @@
+# upgrade_sword_decision = {
+# 	picture = decision_smith
+# 	decision_group_type = equip_upgrade_group_type 
+
+# 	desc = sword_upgrade_decision_desc
+# 	selection_tooltip = sword_upgrade_selection_tooltip
+# 	# effect_tooltip = sword_upgrade_effect_tooltip
+# 	confirm_text = sword_upgrade_confirm_text
+# 	ai_check_frequency = 0
+# 	is_shown = {
+# 		has_trait = education_martial_2
+		
+# 		is_ai = no
+# 		is_player = yes
+# 	}
+# 	ai_check_interval = 0
+# 	is_valid = {
+# 		prestige_level >= 2
+# 		learning >= 12
+# 		martial >= 12
+# 		has_artifact_flag = basic_sword_flag
+		
+# 	}
+# 	cost = {
+# 		gold = 250
+# 		prestige = 250
+# 	}
+# 	effect = {
+# 		custom_tooltip = sword_upgrade_decision_reward_1
+		
+		
+# 		trigger_event ={
+# 		id = sword_update_event.01
+# 		}
+
+# 	}
+# }

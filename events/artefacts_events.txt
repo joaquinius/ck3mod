@@ -1,0 +1,29 @@
+
+
+# events/artefacts_events.txt
+namespace = sword_update_event
+
+sword_update_event.01 = {
+    type = character_event
+    name = "Un Arma mejor"
+    desc = "Mi fiel espada me ha sido útil, pero necesito algo mejor"
+    
+    override_background = {
+        event_background = armory
+    }
+    left_portrait = {
+        character = root
+        animation = celebrate_sword
+    }
+    option = {
+        name = "Generar espada nueva"
+        create_artifact_sword_effect = {
+            OWNER = root
+        }
+    }
+    option = {
+        name = "Actualizar arma existente"
+        destroy_artifact_effect = { OWNER = root }
+        # create_artifact_sword_effect = { OWNER = root }  # Opcional: Crear nueva al actualizar
+    }
+}

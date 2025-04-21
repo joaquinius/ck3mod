@@ -1,0 +1,11 @@
+# common/on_actions/martial_on_actions.txt
+martial_duel_pulse = {
+    on_actions = {
+        monthly_pulse = {
+            random_events = {
+                # weight = event name
+                10 = martial_event_1_mini.02
+            }
+        }
+    }
+}

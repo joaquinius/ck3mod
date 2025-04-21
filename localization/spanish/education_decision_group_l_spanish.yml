@@ -1,2 +1,8 @@
 ﻿l_spanish:
-  decision_group_type_martial_group_type: "El camino de la marcialidad"
+  decision_group_type_martial_group_type:0 "El Camino de la Marcialidad"
+  decision_group_type_diplomacy_group_type:0 "El Camino de la Diplomacia" 
+  decision_group_type_intrigue_group_type:0 "El Camino de las Sombras"
+  decision_group_type_learning_group_type:0 "El Camino del Saber"
+  decision_group_type_stewardship_group_type:0 "El Camino del Desarrollo" 
+
+  decision_group_type_equip_upgrade_group_type:0 "Mejorar el equipo"

@@ -1,0 +1,292 @@
+namespace = training_way
+training_way.01 = {
+	type = character_event
+	title = "Quiero entrenar"
+	desc = "¿En qué quieres concentrar tu entrenamiento hoy?"
+	trigger = {
+		has_trait = training_way
+	}
+	left_portrait = {
+		animation = aggressive_sword
+		character = root
+	}
+	override_background = {
+		event_background = activity_tournament
+	}
+	option = {
+		name = "Entrenar mi fuerza"
+		trigger_event = {
+			id = training_way.02
+			days = 1
+		}
+	}
+	option = {
+		name = "Entrenar lucha"
+		trigger_event = {
+			id = training_way.03
+			days = 1
+		}
+	}
+	option = {
+		name = "Estudiar teoría marcial"
+		trigger_event = {
+			id = training_way.04
+			days = 1
+		}
+	}
+	option = {
+		name = "Practicar combate con armas"
+		trigger_event = {
+			id = training_way.05
+			days = 1
+		}
+	}
+}
+
+training_way.02 = {
+	type = character_event
+	title = "El peso del amanecer"
+	desc = "Cada mañana te despiertas antes del alba y levantas pesados troncos como parte de tu entrenamiento."
+	trigger = {
+		has_trait = training_way
+	}
+	option = {
+		name = "Continuar. ¡No hay gloria sin sufrimiento!"
+		add_trait_xp = {
+			trait = training_way
+			track = body
+			value = 10
+		}
+		add_stress = 20
+		trigger_event = {
+			id = training_way.02
+			days = 15
+		}
+	}
+	option = {
+		name = "Ya he entrenado suficiente por ahora."
+		add_trait_xp = {
+			trait = training_way
+			track = body
+			value = 5
+		}
+		add_stress = -10
+	}
+}
+
+training_way.03 = {
+	type = character_event
+	title = "Lucha sin reglas"
+	desc = "Te enfrentas a un oponente en un combate brutal sin armas. El estilo recuerda al pancracio antiguo."
+	trigger = {
+		has_trait = training_way
+	}
+	option = {
+		name = "¡A luchar!"
+		add_trait_xp = {
+			trait = training_way
+			track = fights
+			value = 10
+		}
+		add_prowess = 1
+		add_stress = 15
+		if = {
+			limit = {
+				random < 0.3
+			}
+			add_injury = broken_nose
+		}
+	}
+	option = {
+		name = "Prefiero evitar lesiones..."
+		add_stress = -5
+	}
+}
+
+training_way.04 = {
+	type = character_event
+	title = "Estudio disciplinado"
+	desc = "Pasas el día leyendo tratados de estrategia, memorias de generales y analizando tácticas de guerra. El conocimiento también forja guerreros."
+	trigger = {
+		has_trait = training_way
+	}
+	option = {
+		name = "Cada batalla comienza en la mente."
+		add_trait_xp = {
+			trait = training_way
+			track = study
+			value = 10
+		}
+		add_learning = 1
+		add_stress = 10
+		trigger_event = {
+			id = training_way.04
+			days = 20
+		}
+	}
+	option = {
+		name = "Hoy no tengo cabeza para leer."
+		add_stress = -5
+	}
+}
+
+training_way.05 = {
+	type = character_event
+	title = training_way.05.t
+	desc = training_way.05.desc
+	theme = martial_training
+	left_portrait = {
+		character = root
+		animation = train
+	}
+	right_portrait = {
+		character = scope:training_partner
+		animation = training_sword
+	}
+	trigger = {
+		has_trait = training_way
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					scope:training_partner.is_valid = yes
+				}
+				OR = {
+					NOT = {
+						scope:training_partner.exists = yes
+					}
+					NOT = {
+						scope:training_partner.is_alive = yes
+					}
+				}
+			}
+			create_character = {
+				save_scope_as = training_partner
+				randomized_fallback_name = yes
+				female = no
+				gender = male
+				dynasty = none
+				culture = root.culture
+				faith = root.faith
+				location = root.location
+				age = {
+					min = 20
+					max = 22
+					years_until_death = 5
+				}
+				diplomacy = {
+					min = 4
+					max = 10
+				}
+				martial = {
+					min = 8
+					max = 12
+				}
+				stewardship = {
+					min = 4
+					max = 10
+				}
+				intrigue = {
+					min = 4
+					max = 10
+				}
+				learning = {
+					min = 4
+					max = 10
+				}
+				prowess = {
+					min = 8
+					max = 12
+				}
+				traits = {
+					add = brave
+					add = training_way
+				}
+				add_opinion = {
+					target = root
+					modifier = opinion_rival
+				}
+			}
+		}
+	}
+	option = {
+		name = training_way.05.a		# Simulated duel
+		skill = prowess
+		custom_tooltip = training_way.05.a.tt.duel_simulated
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = root
+			SC_ATTACKER = root
+			SC_DEFENDER = scope:training_partner
+			FATALITY = none
+			FIXED = yes
+			LOCALE = terrain_scope
+			INVALIDATION_EVENT = training_events.1005
+			OUTPUT_EVENT = training_events.1006
+		}
+		add_trait_xp = {
+			trait = training_way
+			amount = 50
+		}
+	}
+	option = {
+		name = training_way.05.b		# Real duel (dangerous)
+		skill = prowess
+		trigger = {
+			prowess >= 10
+		}
+		# Solo si el personaje es fuerte
+		custom_tooltip = training_way.05.b.tt.duel_real
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = root
+			SC_ATTACKER = root
+			SC_DEFENDER = scope:training_partner
+			FATALITY = possible
+			FIXED = no
+			LOCALE = terrain_scope
+			INVALIDATION_EVENT = training_events.1005
+			OUTPUT_EVENT = training_events.1006
+		}
+		add_trait_xp = {
+			trait = training_way
+			amount = 100
+		}
+		stress_impact = {
+			brave = minor_stress_impact_loss
+			craven = medium_stress_impact_gain
+		}
+	}
+}
+
+# training_way.05 = {
+# 	type = character_event
+# 	title = "Sparring con armas"
+# 	desc = "Te enfrentas a un escudero o un guerrero de confianza, entrenando con espadas embotadas. Golpes, bloqueos y reflejos se perfeccionan con cada duelo."
+# 	trigger = {
+# 		has_trait = training_way
+# 	}
+# 	option = {
+# 		name = "¡Prepárate, que no pienso contenerme!"
+# 		add_trait_xp = {
+# 			trait = training_way
+# 			track = fights
+# 			value = 10
+# 		}
+# 		add_prowess = 1
+# 		add_stress = 15
+# 		if = {
+# 			limit = {
+# 				random < 0.25
+# 			}
+# 			add_trait  = wounded_1 
+# 		}
+# 		trigger_event = {
+# 			id = training_way.05
+# 			days = 15
+# 		}
+# 	}
+# 	option = {
+# 		name = "Estoy demasiado cansado para combatir hoy."
+# 		add_stress = -5
+# 	}
+# }

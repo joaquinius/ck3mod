@@ -1,0 +1,29 @@
+simple_duel_effect = {
+    # Guardamos los scopes
+    $SC_INITIATOR$ = { save_scope_as = sc_initiator }
+    $SC_ATTACKER$  = { save_scope_as = sc_attacker }
+    $SC_DEFENDER$  = { save_scope_as = sc_defender }
+
+    # Marcamos a los combatientes como ocupados
+    scope:sc_attacker = {
+        set_variable = { name = engaged_in_single_combat value = yes }
+    }
+    scope:sc_defender = {
+        set_variable = { name = engaged_in_single_combat value = yes }
+    }
+
+    # Guardamos qué evento lanzar después y en caso de fallo
+    save_scope_value_as = {
+        name  = follow_up_event
+        value = event_id:$OUTPUT_EVENT$
+    }
+    save_scope_value_as = {
+        name  = invalidation_event
+        value = event_id:$INVALIDATION_EVENT$
+    }
+
+    # Disparamos la primera ronda del combate
+    scope:sc_defender = {
+        trigger_event = single_combat.0001
+    }
+}

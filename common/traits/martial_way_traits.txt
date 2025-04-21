@@ -1,0 +1,274 @@
+training_way = {
+	same_opinion = 10
+	martial = 1
+	learning = 1
+	monthly_martial_lifestyle_xp_gain_mult = 0.05
+	ruler_designer_cost = 10
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = {
+						exists = this
+					}
+				}
+				desc = training_way_desc
+			}
+			desc = training_way_character_desc
+		}
+	}
+	icon = {
+		first_valid = {
+			triggered_desc = {
+				#If no character exists
+				trigger = {
+					NOT = {
+						exists = this
+					}
+				}
+				desc = trained_body.dds
+			}
+			triggered_desc = {
+				trigger = {
+					AND = {
+						has_trait_xp = {
+							trait = training_way
+							track = body
+							value >= 30
+						}
+						has_trait_xp = {
+							trait = training_way
+							track = fights
+							value >= 30
+						}
+						has_trait_xp = {
+							trait = training_way
+							track = study
+							value >= 30
+						}
+					}
+				}
+				desc = trained_body.dds
+			}
+			triggered_desc = {
+				trigger = {
+					AND = {
+						has_trait_xp = {
+							trait = training_way
+							track = body
+							value >= 30
+						}
+						has_trait_xp = {
+							trait = training_way
+							track = fights
+							value >= 30
+						}
+						has_trait_xp = {
+							trait = training_way
+							track = study
+							value >= 30
+						}
+					}
+				}
+				desc = trained_body.dds
+			}
+			triggered_desc = {
+				trigger = {
+					AND = {
+						has_trait_xp = {
+							trait = training_way
+							track = body
+							value >= 30
+						}
+						has_trait_xp = {
+							trait = training_way
+							track = fights
+							value >= 30
+						}
+					}
+				}
+				desc = trained_body.dds
+			}
+			triggered_desc = {
+				trigger = {
+					AND = {
+						has_trait_xp = {
+							trait = training_way
+							track = body
+							value >= 30
+						}
+						has_trait_xp = {
+							trait = training_way
+							track = study
+							value >= 30
+						}
+					}
+				}
+				desc = trained_body.dds
+			}
+			triggered_desc = {
+				trigger = {
+					AND = {
+						has_trait_xp = {
+							trait = training_way
+							track = study
+							value >= 30
+						}
+						has_trait_xp = {
+							trait = training_way
+							track = fights
+							value >= 30
+						}
+					}
+				}
+				desc = trained_body.dds
+			}
+			triggered_desc = {
+				trigger = {
+					AND = {
+						has_trait_xp = {
+							trait = training_way
+							track = body
+							value >= 30
+						}
+						has_trait_xp = {
+							trait = training_way
+							track = fights
+							value >= 30
+						}
+					}
+				}
+				desc = trained_body.dds
+			}
+			triggered_desc = {
+				trigger = {
+					AND = {
+						has_trait_xp = {
+							trait = training_way
+							track = body
+							value >= 30
+						}
+						has_trait_xp = {
+							trait = training_way
+							track = study
+							value >= 30
+						}
+					}
+				}
+				desc = trained_body.dds
+			}
+			triggered_desc = {
+				trigger = {
+					AND = {
+						has_trait_xp = {
+							trait = training_way
+							track = fights
+							value >= 30
+						}
+						has_trait_xp = {
+							trait = training_way
+							track = study
+							value >= 30
+						}
+					}
+				}
+				desc = trained_body.dds
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = training_way
+						track = body
+						value >= 30
+					}
+				}
+				desc = trained_body.dds
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = training_way
+						track = fights
+						value >= 30
+					}
+				}
+				desc = trained_body.dds
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = training_way
+						track = study
+						value >= 30
+					}
+				}
+				desc = trained_body.dds
+			}
+			desc = trained_body.dds
+		}
+	}
+	tracks = {
+		body = {
+			30 = {
+				prowess = 1
+				health = 0.05
+			}
+			65 = {
+				prowess = 1
+				martial = 1
+				health = 0.1
+			}
+			100 = {
+				health = 0.25
+				prowess_per_stress_level = 4
+			}
+		}
+		fights = {
+			30 = {
+				prowess = 1
+				
+			}
+			65 = {
+				vassal_levy_contribution_add = 0.15
+				prowess = 1
+			}
+			100 = {
+				monthly_dynasty_prestige_mult = 0.05
+				prowess_per_prestige_level = 1
+			}
+		}
+		study = {
+			30 = {
+				monthly_martial_lifestyle_xp_gain_mult = 0.05
+				health = 0.1
+				martial = 1
+				learning = 1
+			}
+			65 = {
+				monthly_martial_lifestyle_xp_gain_mult = 0.1
+				glory_hound_opinion = 20
+				health = 0.1
+				martial = 1
+				learning = 1
+			}
+			# 80 = {
+			# 	monthly_martial_lifestyle_xp_gain_mult = 0.1
+			# 	glory_hound_opinion = 20
+			# 	health = 0.1
+			# 	martial = 1
+			# 	learning = 1
+			# }
+			100 = {
+				men_at_arms_limit = 2
+				knight_limit = 2
+				army_maintenance_mult = -0.25
+				martial = 2
+				learning = 2
+			}
+		}
+	}
+	compatibility = {
+		brave = @pos_compat_low
+		craven = @neg_compat_low
+	}
+}

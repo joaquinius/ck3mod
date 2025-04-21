@@ -1,0 +1,15 @@
+﻿l_spanish:
+  martial_event_1.1.t:0 "El Encuentro con el Maestro"
+  martial_event_1.1.desc:0 "Una figura de presencia imponente se presenta en tu corte. Se hace llamar Maestro [scope:0martial_char.GetFirstName], un veterano de incontables campañas. Ha venido a ofrecerte su guía, si estás dispuesto a escuchar."
+
+  martial_event_1.1.a:0 "Acepto su guía"
+  martial_event_1.1.b:0 "No necesito un mentor"
+
+  started_training_with_master:0 "Entrenamiento con el Maestro"
+  opinion_respected_master:0 "Respetó mi sabiduría"
+  opinion_rejected:0 "Rechazó mi ayuda"
+  
+  martial_event_1.200.t:0 "Victoria en el Campo de Entrenamiento"
+  martial_event_1.200.desc:0 "Con un movimiento final preciso, desarmas a tu oponente. Su espada cae al polvo mientras asiente con respeto."
+  martial_event_1.201.t:0 "Lección Aprendida"
+  martial_event_1.201.desc:0 "Un giro inesperado te desequilibra. Antes de que puedas reaccionar, sientes el filo frío del acero contra tu cuello."

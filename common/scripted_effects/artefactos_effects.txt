@@ -1,0 +1,181 @@
+﻿
+create_artifact_sword_effect = {
+    $OWNER$ = { save_scope_as = owner }
+    set_artifact_rarity_common = yes
+    
+    create_artifact = {
+        name = basic_sword_name
+        description = basic_sword_description
+        type = sword
+        template = basic_sword_template
+        visuals = basic_sword
+        wealth = scope:wealth
+        quality = scope:quality
+        
+        history = {
+            type = created_before_history
+        }
+        modifier = legendary_martial_modifier     
+        modifier = basic_sword_modifier 
+        save_scope_as = newly_created_artifact
+        decaying = no
+        add_artifact_flag = basic_sword_flag  # Usamos flag para identificación
+    }
+
+    scope:newly_created_artifact = {
+        set_variable = { name = historical_unique_artifact value = yes }
+        # Eliminada variable redundante my_basic_sword
+    }
+}
+
+destroy_artifact_effect = {
+    $OWNER$ = {
+        every_artifact = {
+            limit = {
+                has_artifact_flag = basic_sword_flag  # Identificamos por flag
+            }
+            destroy_artifact = this  # Destruimos el artefacto actual en el loop
+        }
+    }
+}
+#no tocar 	
+# destroy_artifact_effect = {
+#     $OWNER$ = {
+#         every_artifact = {
+#             limit = {
+#                 has_artifact_flag = basic_sword_flag  # Identificamos por flag
+#             }
+#             destroy_artifact = this  # Destruimos el artefacto actual en el loop
+#         }
+#     }
+# }	
+
+
+
+
+
+create_artifact_helmet_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_common = yes           
+
+	# Create the artifact
+	create_artifact = {
+		name = basic_helmet_name
+		description = basic_helmet_description
+		type = helmet
+		template = basic_helmet_template
+		
+		visuals = basic_helmet
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = created_before_history
+		}
+		modifier = basic_helmet_modifier
+		
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = basic_helmet_variable
+		save_scope_as = epic
+	}
+}
+
+create_artifact_shield_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_common = yes           
+	
+	# Create the artifact
+	create_artifact = {
+		name = basic_shield_name
+		description = basic_shield_description
+		type = regalia
+		template = basic_shield_template
+		
+		visuals = basic_shield
+		
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = created_before_history
+		}
+		modifier = basic_shield_modifier
+		
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = basic_shield_variable
+		save_scope_as = epic
+	}
+}
+
+
+create_artifact_book_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_common = yes           
+	
+	# Create the artifact
+	create_artifact = {
+		name = basic_book_name
+		description = basic_book_description
+		type = journal 
+		template = basic_book_template
+		
+		visuals = basic_book
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = created_before_history
+		}
+		modifier = basic_book_modifier
+		
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = basic_book_variable
+		save_scope_as = epic
+	}
+}
+create_artifact_armor_effect = {
+    $OWNER$ = { save_scope_as = owner }
+    set_artifact_rarity_common = yes           
+
+    create_artifact = {
+        name = basic_armor_name
+        description = basic_armor_description
+        type = armor_mail  # Tipo definido en "my_artifact_types.txt"
+        template = basic_armor_template
+        visuals = basic_armor
+        wealth = scope:wealth
+        quality = scope:quality
+        history = {
+            type = created_before_history
+        }
+        modifier = basic_armor_modifier
+        save_scope_as = newly_created_artifact
+        decaying = no
+    }
+
+    scope:newly_created_artifact = {
+        set_variable = { name = historical_unique_artifact value = yes }
+        set_variable = basic_armor_variable
+        save_scope_as = epic
+    }
+}
+
+

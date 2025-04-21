@@ -1,0 +1,6 @@
+﻿l_spanish:
+  upgrade_sword_decision:0 "Reforjar la Espada del Guerrero"
+  sword_upgrade_decision_desc:0 "Es hora de dejar atrás tu antigua hoja y forjar un arma que represente tu dominio marcial."
+  sword_upgrade_selection_tooltip:0 "Decidiste visitar al herrero"
+  sword_upgrade_confirm_text:0 "Destruirás tu arma actual y forjarás una nueva, mejorada."
+  sword_upgrade_decision_reward_1:0 "Desencadena un evento que te permitirá crear una nueva espada mejorada."

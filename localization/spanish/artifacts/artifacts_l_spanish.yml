@@ -1,0 +1,27 @@
+﻿l_spanish:
+  # mjolnir_name: "Mjolnir"
+  # mjolnir_description: "A strangely short-hafted hammer that looks as if it might have been flawed during production. It bears a striking resemblance to the hammer wielded by Thor, the Thundergod, as told in myth."
+
+  basic_sword_name:0 "Espada de aprendiz"
+  basic_sword_description:0 "esta espada fue un regalo de tu maestro "
+  
+
+  basic_helmet_name:0 "Corona del Vencedor"
+  basic_helmet_description:0 "Un casco resistente usado por los vencedores de innumerables batallas."
+
+  basic_shield_name:0 "Escudo del Honor"
+  basic_shield_description:0 "Un escudo grabado con runas de lealtad y coraje."
+
+  basic_armor_name:0 "Armadura del León" 
+  basic_armor_description:0 "Una Armadura majestuosa que ondea con la presencia de un verdadero líder."
+
+  basic_book_name:0 "Libro del Estratega"
+  basic_book_description:0 "Un compendio de sabiduría táctica y arte de la guerra."
+
+  
+
+
+  
+  
+
+  

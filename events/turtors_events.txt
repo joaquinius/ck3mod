@@ -1,0 +1,38 @@
+
+namespace = tutor_event
+
+tutor_event.01 = {
+	type = character_event
+	title = tutor_event.01.t
+	desc=tutor_event.01.desc
+	immediate = {
+		if = {
+			limit = { is_ai = no }
+
+			# Crear personaje marcial
+			generate_martial_char_effect = yes
+
+			# Darle opinión si fue creado correctamente
+			if = {
+				limit = { exists = scope:martial_1 }
+				boost_courtier_opinion_effect = { SKILL = martial }
+			}
+		}
+	}
+
+	hidden_effect = {
+		every_in_list = {
+			list = spawned_chars_list
+			assign_nickname = nickname_valiant  # Ejemplo real
+		}
+	}
+
+	option = {
+		name = tutor_event.01.a  # localization
+		trigger = { exists = scope:martial_1 }
+		if = {
+			limit = { is_ai = no }
+			add_courtiers_effect = { SKILL = martial }
+		}
+	}
+}

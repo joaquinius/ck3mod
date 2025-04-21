@@ -1,0 +1,50 @@
+
+basic_sword_template = {
+	can_equip = { always = yes }
+	can_benefit = { always = yes }
+	fallback = { }
+	unique = yes
+}
+upgraded_sword_template ={
+	can_equip = { always = yes }
+	can_benefit = { always = yes }
+	fallback = { }
+	unique = yes
+}
+basic_helmet_template = {
+	can_equip = { always = yes }
+	can_benefit = { always = yes }
+	fallback = { }
+	unique = yes
+}
+
+basic_shield_template = {
+	can_equip = { always = yes }
+	can_benefit = { always = yes }
+	fallback = { }
+	unique = yes
+}
+
+basic_armor_template = {
+    slot = armor_slot  # ¡Redundante pero asegura compatibilidad!
+    can_equip = { always = yes }
+    can_benefit = { always = yes }
+    fallback = { }
+    unique = yes
+}
+mjolnir_modifier = {
+	heavy_infantry_damage_mult = 0.2
+	heavy_infantry_toughness_mult = 0.2
+	knight_effectiveness_mult = 0.2
+	monthly_prestige = 0.5
+	monthly_dynasty_prestige = 0.5
+	martial = 3
+	same_faith_opinion = 5
+	prowess = 20
+}
+basic_book_template = {
+	can_equip = { always = yes }
+	can_benefit = { always = yes }
+	fallback = { }
+	unique = yes
+}

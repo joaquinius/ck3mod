@@ -2,35 +2,118 @@
  
 
 
-  first_level_martial_decision: "El Despertar del Acero"
-  first_level_martial_decision_desc: "He renunciado a la mediocridad. Desde ahora, mi vida será forjada con disciplina y acero. La conquista será mi propósito."
-  first_level_martial_selection_tooltip: "Comienza tu transformación: el camino marcial exige claridad y voluntad."
-  first_level_martial_confirm_text: "Afilen el acero, estoy listo para empuñarlo."
-  first_level_martial_decision_reward_1: "Cuando consigas completes el entrenamiento, ganarás el [trait|lE] #V [GetTrait('education_martial_2').GetName( GetNullCharacter )|l]#!"
+  first_level_martial_decision:0 "El Despertar del Acero"
+  first_level_martial_decision_desc:0 "He renunciado a la mediocridad. Desde ahora, mi vida será forjada con disciplina y acero. La conquista será mi propósito."
+  first_level_martial_selection_tooltip:0 "Comienza tu transformación: el camino marcial exige claridad y voluntad."
+  first_level_martial_confirm_text:0 "Afilen el acero, estoy listo para empuñarlo."
   #segundo nivel
-  second_level_martial_decision: "El Sendero de la Guerra"
-  second_level_martial_selection_tooltip: "Avanza por el sendero que sólo los valientes se atreven a recorrer."
-  second_level_martial_decision_desc: "He superado la instrucción básica. Cada batalla es una lección, y cada cicatriz, una marca de honor."
-  second_level_martial_confirm_text: "Que el campo de batalla me enseñe lo que aún ignoro."
+  fits_level_martial_decision_reward_0:0 "Cuando consigas completes el entrenamiento:0"
+  first_level_martial_decision_reward_1:0 "Ganarás el [trait|lE] #V [GetTrait('education_martial_2').GetName( GetNullCharacter )|l]#!"
+
+  second_level_martial_decision:0 "El Sendero de la Guerra"
+  second_level_martial_selection_tooltip:0 "Avanza por el sendero que sólo los valientes se atreven a recorrer."
+  second_level_martial_decision_desc:0 "He superado la instrucción básica. Cada batalla es una lección, y cada cicatriz, una marca de honor."
+  second_level_martial_confirm_text:0 "Que el campo de batalla me enseñe lo que aún ignoro."
   
-  second_level_martial_decision_reward_1: "Cuando consigas completes el entrenamiento, ganarás el [trait|lE] #V [GetTrait('education_martial_3').GetName( GetNullCharacter )|l]#! "
+  second_level_martial_decision_reward_1:0 "Cuando consigas completes el entrenamiento,ganarás el [trait|lE] #V [GetTrait('education_martial_3').GetName( GetNullCharacter )|l]#! "
 
   # tercer nivel 
-  third_level_martial_decision: "El Arte del Guerrero"
-  third_level_martial_decision_desc: "Ya no lucho por aprender. Lucho por perfeccionar. Mis enemigos me temen, pero aún no he alcanzado mi cima."
-  third_level_martial_selection_tooltip: "Perfecciona tu técnica y haz del combate una forma de expresión."
-  third_level_martial_confirm_text: "Muéstrame el límite, y lo romperé."
-  third_level_martial_decision_reward_1: "Cuando consigas completes el entrenamiento, ganarás el [trait|lE] #V [GetTrait('education_martial_4').GetName( GetNullCharacter )|l]#!"
-  third_level_martial_decision_reward_2: "Pierdes el [trait|lE] #V [GetTrait('education_martial_3').GetName( GetNullCharacter )|l]#!"
+  third_level_martial_decision:0 "El Arte del Guerrero"
+  third_level_martial_decision_desc:0 "Ya no lucho por aprender. Lucho por perfeccionar. Mis enemigos me temen, pero aún no he alcanzado mi cima."
+  third_level_martial_selection_tooltip:0 "Perfecciona tu técnica y haz del combate una forma de expresión."
+  third_level_martial_confirm_text:0 "Muéstrame el límite, y lo romperé."
+  third_level_martial_decision_reward_1:0 "Cuando consigas completes el entrenamiento, ganarás el [trait|lE] #V [GetTrait('education_martial_4').GetName( GetNullCharacter )|l]#!"
+  third_level_martial_decision_reward_2:0 "Pierdes el [trait|lE] #V [GetTrait('education_martial_3').GetName( GetNullCharacter )|l]#!"
 
-  fourt_level_martial_decision: "La Cumbre del Combate"
-  fourt_level_martial_decision_desc: "He trascendido la guerra. Soy uno con el filo, con la estrategia, con la voluntad de vencer."
-  fourt_level_martial_selection_tooltip: "Solo los verdaderos maestros conocen este sendero."
-  fourt_level_martial_confirm_text: "La guerra no me domina. Yo soy la guerra."
-  fourt_level_martial_decision_reward_1: "Cuando consigas completes el entrenamiento, ganarás el [trait|lE] #V [GetTrait('education_martial_5').GetName( GetNullCharacter )|l]#!"
-  fourt_level_martial_decision_reward_2: "Pierdes el [trait|lE] #V [GetTrait('education_martial_4').GetName( GetNullCharacter )|l]#!"
+  fourth_level_martial_decision:0 "La Cumbre del Combate"
+  fourth_level_martial_decision_desc:0 "He trascendido la guerra. Soy uno con el filo, con la estrategia, con la voluntad de vencer."
+  fourth_level_martial_selection_tooltip:0 "Solo los verdaderos maestros conocen este sendero."
+  fourth_level_martial_confirm_text:0 "La guerra no me domina. Yo soy la guerra."
+  fourth_level_martial_decision_reward_1:0 "Cuando consigas completes el entrenamiento, ganarás el [trait|lE] #V [GetTrait('education_martial_5').GetName( GetNullCharacter )|l]#!"
+  fourth_level_martial_decision_reward_2:0 "Pierdes el [trait|lE] #V [GetTrait('education_martial_4').GetName( GetNullCharacter )|l]#!"
 
- 
-  
-  
-  
+    # Diplomacy decisions
+  first_level_diplomacy_decision:0 "El Camino del Orador"
+  first_level_diplomacy_decision_desc:0 "El primer paso hacia la excelencia diplomática comienza con el dominio del discurso y la etiqueta."
+  first_level_diplomacy_decision_tooltip:0 "Comienza tu progreso en el arte de la diplomacia."
+  first_level_diplomacy_decision_confirm:0 "Aceptar el desafío diplomático"
+  first_level_diplomacy_decision_reward_1:0 "Pierdes el [trait|lE] #V [GetTrait('education_diplomacy_1').GetName( GetNullCharacter )|l]#! "
+
+  second_level_diplomacy_decision:0 "Prueba del Mediador"
+  second_level_diplomacy_decision_desc:0 "Demuestra tu habilidad para resolver disputas con sabiduría y templanza."
+  second_level_diplomacy_decision_tooltip:0 "Avanza al siguiente nivel de educación diplomática."
+  second_level_diplomacy_decision_confirm:0 "Asumir la prueba"
+  second_level_diplomacy_decision_reward:0 "Pierdes el [trait|lE] #V [GetTrait('education_diplomacy_2').GetName( GetNullCharacter )|l]#! "
+
+  third_level_diplomacy_decision:0 "Reto del Embajador"
+  third_level_diplomacy_decision_desc:0 "Solo aquellos que comprenden la política exterior pueden convertirse en verdaderos diplomáticos."
+  third_level_diplomacy_decision_tooltip:0 "Avanza al tercer nivel de educación diplomática."
+  third_level_diplomacy_decision_confirm:0 "Aceptar el reto"
+
+  fourth_level_diplomacy_decision:0 "El Arte de la Paz"
+  fourth_level_diplomacy_decision_desc:0 "Conviértete en una figura legendaria de la diplomacia, capaz de unir incluso a los enemigos más acérrimos."
+  fourth_level_diplomacy_decision_tooltip:0 "Completa tu educación diplomática."
+  fourth_level_diplomacy_decision_confirm:0 "Dominar la diplomacia"
+
+  # Intrigue decisions
+  first_level_intrigue_decision:0 "El Sendero del Susurro"
+  first_level_intrigue_decision_desc:0 "Todo comienza con aprender a escuchar lo que otros ocultan."
+  first_level_intrigue_decision_tooltip:0 "Comienza tu progreso en el arte del engaño."
+  first_level_intrigue_decision_confirm:0 "Sumergirse en las sombras"
+
+  second_level_intrigue_decision:0 "Prueba del Espía"
+  second_level_intrigue_decision_desc:0 "Pon a prueba tus habilidades para infiltrar, espiar y manipular."
+  second_level_intrigue_decision_tooltip:0 "Avanza al siguiente nivel de educación en intriga."
+  second_level_intrigue_decision_confirm:0 "Aceptar la misión"
+
+  third_level_intrigue_decision:0 "Juego del Engaño"
+  third_level_intrigue_decision_desc:0 "Solo los astutos sobreviven en la red de conspiraciones."
+  third_level_intrigue_decision_tooltip:0 "Avanza al tercer nivel de educación en intriga."
+  third_level_intrigue_decision_confirm:0 "Trazar el engaño"
+
+  fourth_level_intrigue_decision:0 "Maestro de los Secretos"
+  fourth_level_intrigue_decision_desc:0 "Domina todos los hilos de la intriga y conviértete en el amo de las sombras."
+  fourth_level_intrigue_decision_tooltip:0 "Completa tu educación en intriga."
+  fourth_level_intrigue_decision_confirm:0 "Reclamar el dominio secreto"
+
+  # Learning decisions
+  first_level_learning_decision:0 "El Sendero del Sabio"
+  first_level_learning_decision_desc:0 "La búsqueda del conocimiento eterno comienza con una sola página."
+  first_level_learning_decision_tooltip:0 "Comienza tu progreso en el arte del aprendizaje."
+  first_level_learning_decision_confirm:0 "Abrir el libro"
+
+  second_level_learning_decision:0 "Prueba del Erudito"
+  second_level_learning_decision_desc:0 "Demuéstrale al mundo que tu conocimiento no es superficial."
+  second_level_learning_decision_tooltip:0 "Avanza al siguiente nivel de educación en aprendizaje."
+  second_level_learning_decision_confirm:0 "Aceptar la prueba intelectual"
+
+  third_level_learning_decision:0 "Dominio de los Misterios"
+  third_level_learning_decision_desc:0 "Los secretos del mundo están al alcance de los verdaderos sabios."
+  third_level_learning_decision_tooltip:0 "Avanza al tercer nivel de educación en aprendizaje."
+  third_level_learning_decision_confirm:0 "Profundizar el saber"
+
+  fourth_level_learning_decision:0 "La Iluminación"
+  fourth_level_learning_decision_desc:0 "Tu mente ha trascendido los límites del conocimiento común."
+  fourth_level_learning_decision_tooltip:0 "Completa tu educación en aprendizaje."
+  fourth_level_learning_decision_confirm:0 "Alcanzar la sabiduría"
+
+  # Stewardship decisions
+  first_level_stewardship_decision:0 "Fundamentos del Orden"
+  first_level_stewardship_decision_desc:0 "Un buen administrador comienza dominando la contabilidad y la ley."
+  first_level_stewardship_decision_tooltip:0 "Comienza tu progreso en el arte de la administración."
+  first_level_stewardship_decision_confirm:0 "Organizar el dominio"
+
+  second_level_stewardship_decision:0 "Prueba del Intendente"
+  second_level_stewardship_decision_desc:0 "Pon en orden tus tierras y asegúrate de que prosperen."
+  second_level_stewardship_decision_tooltip:0 "Avanza al siguiente nivel de educación en administración."
+  second_level_stewardship_decision_confirm:0 "Asumir el control"
+
+  third_level_stewardship_decision:0 "Desafío del Tesorero"
+  third_level_stewardship_decision_desc:0 "Equilibra los libros y extrae oro de la piedra."
+  third_level_stewardship_decision_tooltip:0 "Avanza al tercer nivel de educación en administración."
+  third_level_stewardship_decision_confirm:0 "Optimizar la economía"
+
+  fourth_level_stewardship_decision:0 "Arquitecto del Orden"
+  fourth_level_stewardship_decision_desc:0 "Alcanza la cima de la organización y el dominio territorial."
+  fourth_level_stewardship_decision_tooltip:0 "Completa tu educación en administración."
+  fourth_level_stewardship_decision_confirm:0 "Gobernar con maestría"

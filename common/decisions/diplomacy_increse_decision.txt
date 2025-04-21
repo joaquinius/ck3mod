@@ -1,0 +1,175 @@
+first_level_diplomacy_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = equip_update_group_type
+	desc = first_level_diplomacy_decision_desc
+	selection_tooltip = first_level_diplomacy_selection_tooltip
+	effect_tooltip = first_level_diplomacy_effect_tooltip
+	confirm_text = first_level_diplomacy_confirm_text
+	ai_check_frequency = 0
+	is_shown = {
+		has_trait = education_diplomacy_1
+		NOT = {
+			has_trait = education_diplomacy_2
+		}
+		NOT = {
+			has_trait = education_diplomacy_3
+		}
+		NOT = {
+			has_trait = education_diplomacy_4
+		}
+		NOT = {
+			has_trait = education_diplomacy_5
+		}
+		is_ai = no
+		is_player = yes
+	}
+	is_valid = {
+		prestige_level >= 2
+		learning >= 12
+		diplomacy >= 12
+		has_trait = education_diplomacy_1
+		OR = {
+			calc_true_if = {
+				amount >= 2
+				has_lifestyle = diplomacy_lifestyle
+				has_trait = gregarious
+				has_trait = charismatic_negotiator
+			}
+		}
+	}
+	cost = {
+		gold = 250
+		prestige = 250
+	}
+	effect = {
+		custom_tooltip = first_level_diplomacy_decision_reward_1
+		remove_trait = education_diplomacy_1
+		add_trait = education_diplomacy_2
+		trigger_event = {
+			id = diplomacy_event_1.100
+		}
+	}
+}
+
+# NIVEL 2
+second_level_diplomacy_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = diplomacy_group_type
+	desc = second_level_diplomacy_decision_desc
+	selection_tooltip = second_level_diplomacy_selection_tooltip
+	effect_tooltip = second_level_diplomacy_effect_tooltip
+	confirm_text = second_level_diplomacy_confirm_text
+	is_shown = {
+		has_trait = education_diplomacy_2
+		NOT = {
+			has_trait = education_diplomacy_3
+		}
+		NOT = {
+			has_trait = education_diplomacy_4
+		}
+		NOT = {
+			has_trait = education_diplomacy_5
+		}
+		is_ai = no
+		is_player = yes
+	}
+	is_valid = {
+		prestige_level >= 3
+		diplomacy >= 14
+		gold >= 300
+		OR = {
+			has_trait = charismatic_negotiator
+			has_trait = gregarious
+		}
+	}
+	cost = {
+		gold = 300
+		prestige = 300
+	}
+	effect = {
+		custom_tooltip = second_level_diplomacy_decision_reward
+		remove_trait = education_diplomacy_2
+		add_trait = education_diplomacy_3
+		trigger_event = {
+			id = diplomacy_event_2.100
+		}
+		# TODO: Añadir artefacto diplomático menor (por ejemplo, "Anillo del Orador")
+	}
+}
+
+# NIVEL 3
+third_level_diplomacy_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = diplomacy_group_type
+	desc = third_level_diplomacy_decision_desc
+	selection_tooltip = third_level_diplomacy_selection_tooltip
+	effect_tooltip = third_level_diplomacy_effect_tooltip
+	confirm_text = third_level_diplomacy_confirm_text
+	ai_check_frequency = 0
+	is_shown = {
+		has_trait = education_diplomacy_3
+		NOT = {
+			has_trait = education_diplomacy_4
+		}
+	}
+	is_valid = {
+		prestige_level >= 3
+		diplomacy >= 16
+		gold >= 400
+		has_lifestyle = diplomacy_lifestyle
+	}
+	cost = {
+		gold = 400
+		prestige = 400
+	}
+	effect = {
+		remove_trait = education_diplomacy_3
+		add_trait = education_diplomacy_4
+		trigger_event = {
+			id = diplomacy_event_3.100
+		}
+		# TODO: Añadir artefacto intermedio diplomático (por ejemplo, "Toga de Paz Dorada")
+	}
+}
+
+# NIVEL 4
+fourth_level_diplomacy_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = diplomacy_group_type
+	desc = fourth_level_diplomacy_decision_desc
+	selection_tooltip = fouth_level_diplomacy_selection_tooltip
+	effect_tooltip = fouth_level_diplomacy_effect_tooltip
+	confirm_text = fouth_level_diplomacy_confirm_text
+	ai_check_frequency = 0
+	is_shown = {
+		has_trait = education_diplomacy_4
+		NOT = {
+			has_trait = education_diplomacy_5
+		}
+	}
+	is_valid = {
+		prestige_level >= 4
+		diplomacy >= 18
+		gold >= 500
+	}
+	cost = {
+		gold = 500
+		prestige = 500
+	}
+	effect = {
+		remove_trait = education_diplomacy_4
+		add_trait = education_diplomacy_5
+		trigger_event = {
+			id = diplomacy_event_4.100
+		}
+		# TODO: Añadir artefacto legendario diplomático (por ejemplo, "Cetro de Concordia")
+	}
+}

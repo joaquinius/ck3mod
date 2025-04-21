@@ -22,3 +22,7 @@ stewardship_group_type = {
     sort_order = 303
     gui_tags = { big_button }
 }
+equip_upgrade_group_type = {
+    sort_order = 304
+    gui_tags = { big_button }
+}

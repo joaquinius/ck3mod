@@ -1,0 +1,47 @@
+mjolnir = {
+	icon = "mjolnir.dds"
+	asset = ep1_western_hammer_01_a_portrait_entity
+}
+
+# Tier 1 (básico)
+basic_sword = {
+    icon = "artifact_sword.dds"
+    asset = artifact_sword
+    material_overrides = { metal = "iron" }
+}
+
+# Tier 2 (mejorada)
+upgraded_sword = {
+    icon = "artifact_sword.dds"
+    asset = artifact_sword
+    material_overrides = {
+        metal = "steel"
+        glow_effect = "sword_glow_weak"
+    }
+}
+
+# Tier 3 (legendaria)
+legendary_sword = {
+    icon = "artifact_sword.dds"
+    asset = artifact_sword
+    material_overrides = {
+        metal = "gold"
+        glow_effect = "sword_aura_divine"
+    }
+}
+basic_helmet = {
+	icon = "artifact_crown.dds"
+	asset = artifact_crown
+}
+basic_shield = {
+	icon = "artifact_shield.dds"
+	asset = artifact_shield
+}
+basic_armor = {
+	icon = "artifact_armor.dds"
+	asset = artifact_armor
+}
+basic_book = {
+	icon = "artifact_book.dds"
+	asset = artifact_book
+}

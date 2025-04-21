@@ -1,0 +1,255 @@
+early_martial_training = {
+    martial = 3
+    learning = 1
+    prowess = 2
+    diplomacy = 5
+
+    monthly_martial_lifestyle_xp_gain_mult = 0.5
+    desc= early_martial_training_desc
+    icon = camp_positive
+}
+
+opinion_disappointed_in_self={
+    martial = -3
+    learning = -1
+    prowess = -2
+    monthly_martial_lifestyle_xp_gain_mult = -0.5
+    desc = opinion_disappointed_in_self_desc
+    icon = martial_negative
+}
+
+physical_focus = {
+    prowess = 8
+    knight_effectiveness_mult = 0.15
+    movement_speed = 0.05
+    icon = camp_positive
+    desc= physical_focus_desc
+}
+mental_martial_focus = {
+    stewardship = 2
+    learning = 2
+    monthly_piety = 0.
+    icon = martial_positive
+    desc = mental_martial_focus_desc
+    
+}
+martial_training_focus = {
+    martial = 5
+    learning = 5
+    diplomacy = 5
+    prowess = 5
+    monthly_martial_lifestyle_xp_gain_mult = 0.15
+    desc = martial_training_focus_desc
+    icon = martial_positive
+}
+
+improved_sword_modifier  = {
+	heavy_infantry_damage_mult = 0.2
+	heavy_infantry_toughness_mult = 0.2
+	knight_effectiveness_mult = 0.2
+	monthly_prestige = 0.5
+	monthly_dynasty_prestige = 0.5
+	martial = 3
+	same_faith_opinion = 5
+	prowess = 20
+}
+
+#
+confident_from_victory = {
+    prowess = 1
+    monthly_prestige = 0.5
+}
+
+humbled_by_defeat = {
+    learning = 1
+    monthly_piety = 0.3
+}
+#
+legendary_martial_modifier = {
+    martial = 3
+    prowess = 3
+    knight_effectiveness_mult = 0.35
+    advantage = 5
+    enemy_casualties = 0.2
+    prestige = 1.0
+}
+
+basic_sword_modifier = {
+	prowess = 5
+	knight_effectiveness = 0.25
+	advantage = 3
+	enemy_casualties = 0.1
+	prestige = 0.5
+}
+
+basic_helmet_modifier = {
+	prowess = 2
+	knight_effectiveness = 0.15
+	dread = 2
+}
+
+basic_shield_modifier = {
+	advantage = 2
+	enemy_casualties = 0.05
+	army_gold_maintenance_mult = -0.05
+}
+
+basic_armor_modifier = {
+	vassal_limit = 5
+	diplomacy = 2
+	prestige = 1
+}
+
+basic_book_modifier = {
+	martial = 2
+	learning = 1
+	monthly_lifestyle_xp_gain = 0.1
+}
+
+# Diplomacia
+diplomacy_sword_modifier = {
+    prowess = 2
+    diplomacy = 4
+    knight_effectiveness = 0.1
+    advantage = 2
+    enemy_casualties = 0.05
+    prestige = 0.3
+}
+
+diplomacy_helmet_modifier = {
+    diplomacy = 5
+    dread = 3
+    vassal_limit = 3
+    advantage = 1
+}
+
+diplomacy_shield_modifier = {
+    diplomacy = 3
+    advantage = 4
+    army_gold_maintenance_mult = -0.1
+    prestige = 0.5
+}
+
+diplomacy_cloak_modifier = {
+    diplomacy = 2
+    vassal_limit = 3
+    prestige = 1
+    knight_effectiveness = 0.1
+}
+
+diplomacy_book_modifier = {
+    learning = 3
+    diplomacy = 2
+    monthly_lifestyle_xp_gain = 0.1
+}
+
+# Intriga
+intrigue_sword_modifier = {
+    prowess = 3
+    knight_effectiveness = 0.2
+    advantage = 2
+    enemy_casualties = 0.1
+    intrigue = 4
+    prestige = 0.5
+}
+
+intrigue_helmet_modifier = {
+    intrigue = 5
+    dread = 3
+    vassal_limit = 2
+    advantage = 2
+}
+
+intrigue_shield_modifier = {
+    intrigue = 3
+    advantage = 3
+    army_gold_maintenance_mult = -0.05
+    enemy_casualties = 0.1
+}
+
+intrigue_cloak_modifier = {
+    intrigue = 4
+    vassal_limit = 4
+    prestige = 1
+    knight_effectiveness = 0.05
+}
+
+intrigue_book_modifier = {
+    learning = 2
+    intrigue = 3
+    monthly_lifestyle_xp_gain = 0.1
+}
+
+# Aprendizaje
+learning_sword_modifier = {
+    prowess = 2
+    learning = 4
+    advantage = 3
+    prestige = 0.3
+    knight_effectiveness = 0.1
+}
+
+learning_helmet_modifier = {
+    learning = 5
+    dread = 2
+    vassal_limit = 2
+    advantage = 1
+}
+
+learning_shield_modifier = {
+    learning = 3
+    advantage = 2
+    army_gold_maintenance_mult = -0.1
+    prestige = 0.5
+}
+
+learning_cloak_modifier = {
+    learning = 2
+    vassal_limit = 4
+    prestige = 1
+    knight_effectiveness = 0.1
+}
+
+learning_book_modifier = {
+    learning = 5
+    martial = 1
+    monthly_lifestyle_xp_gain = 0.15
+}
+
+# Administración
+stewardship_sword_modifier = {
+    prowess = 1
+    stewardship = 5
+    advantage = 2
+    prestige = 0.4
+    enemy_casualties = 0.05
+}
+
+stewardship_helmet_modifier = {
+    stewardship = 6
+    dread = 2
+    vassal_limit = 3
+    advantage = 1
+}
+
+stewardship_shield_modifier = {
+    stewardship = 4
+    advantage = 3
+    army_gold_maintenance_mult = -0.1
+    prestige = 0.6
+}
+
+stewardship_cloak_modifier = {
+    stewardship = 3
+    vassal_limit = 5
+    prestige = 1
+    knight_effectiveness = 0.1
+}
+
+stewardship_book_modifier = {
+    learning = 2
+    stewardship = 4
+    monthly_lifestyle_xp_gain = 0.1
+}
+
+

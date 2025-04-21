@@ -1,0 +1,5 @@
+win_local_tournament={
+	martial = 1
+	prowess = 1
+	monthly_martial_lifestyle_xp_gain_mult = 0.1
+}

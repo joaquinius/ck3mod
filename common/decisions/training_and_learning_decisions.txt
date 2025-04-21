@@ -1,0 +1,40 @@
+train_body_decision = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/campo_entrenamiento.dds"
+	}
+    title = train_body_decision_title
+
+    
+    desc = train_body_decision_desc
+    confirm_text = train_body_decision_confirm_text
+    selection_tooltip  = train_body_decision_selection_tooltip
+    is_shown = {
+        is_adult = yes
+    }
+
+    is_valid = {
+        OR = {
+            NOT = { has_trait = training_way }
+            has_trait = training_way
+        }
+    }
+
+    effect = {
+        if = {
+            limit = {
+                NOT = { has_trait = training_way }
+            }
+            add_trait = training_way
+            trigger_event = { id = training_way.01 days = 3 }
+        }
+        else = {
+            trigger_event = { id = training_way.01 days = 3 }
+        }
+    }
+
+    ai_potential = {
+        always = no
+    }
+
+    cooldown = { days = 90 }
+}

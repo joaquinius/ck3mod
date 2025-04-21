@@ -1,3 +1,0 @@
-# first_level_diplomcy_decision = {
-	
-# }

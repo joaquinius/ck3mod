@@ -1,0 +1,16 @@
+﻿l_spanish:
+
+  # Evento principal
+  training_way.05.t: "Duelo de Entrenamiento"
+  training_way.05.desc: "Has convocado a un rival de entrenamiento para perfeccionar tus habilidades marciales. ¿Qué tipo de duelo deseas tener hoy?"
+
+  # Opción A - Duelo simulado
+  training_way.05.a: "Duelo de práctica"
+  training_way.05.a.tt.duel_simulated: "Participas en un duelo simulado, sin riesgo de lesiones graves."
+  
+  # Opción B - Duelo real
+  training_way.05.b: "Duelo real"
+  training_way.05.b.tt.duel_real: "Entras en un combate serio, con posibilidad de heridas o incluso la muerte. Solo para verdaderos guerreros."
+
+
+

@@ -1,0 +1,145 @@
+first_level_stewardship_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = stewardship_group_type
+	desc = first_level_stewardship_decision_desc
+	selection_tooltip = first_level_stewardship_selection_tooltip
+	effect_tooltip = first_level_stewardship_effect_tooltip
+	confirm_text = first_level_stewardship_confirm_text
+	ai_check_frequency = 0
+
+	is_shown = {
+		has_trait = education_stewardship_1
+		NOT = { has_trait = education_stewardship_2 }
+		NOT = { has_trait = education_stewardship_3 }
+		NOT = { has_trait = education_stewardship_4 }
+		NOT = { has_trait = education_stewardship_5 }
+		is_ai = no
+		is_player = yes
+	}
+	is_valid = {
+		prestige_level >= 2
+		learning >= 12
+		stewardship >= 12
+		has_trait = education_stewardship_1
+		OR = {
+			calc_true_if = {
+				amount >= 2
+				has_lifestyle = stewardship_lifestyle
+				has_trait = administrator
+				has_trait = diligent
+			}
+		}
+	}
+	cost = {
+		gold = 250
+		prestige = 250
+	}
+	effect = {
+		custom_tooltip = first_level_stewardship_decision_reward_1
+		remove_trait = education_stewardship_1
+		add_trait = education_stewardship_2
+		trigger_event = {
+			id = stewardship_event_1.100
+		}
+	}
+}
+# NIVEL 2
+second_level_stewardship_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = stewardship_group_type
+	desc = second_level_stewardship_decision_desc
+	selection_tooltip = second_level_stewardship_selection_tooltip
+	effect_tooltip = second_level_stewardship_effect_tooltip
+	confirm_text = second_level_stewardship_confirm_text
+	ai_check_frequency = 0
+
+
+	is_shown = {
+		has_trait = education_stewardship_2
+		NOT = { has_trait = education_stewardship_3 }
+	}
+	is_valid = {
+		domain_size >= 5
+		stewardship >= 14
+		gold >= 300
+		OR = {
+			has_trait = diligent
+			has_trait = administrator
+		}
+	}
+	cost = {
+		gold = 300
+	}
+	effect = {
+		remove_trait = education_stewardship_2
+		add_trait = education_stewardship_3
+		trigger_event = { id = stewardship_event_2.100 }
+		# TODO: Añadir artefacto menor de administración (por ejemplo, "Cuaderno del Recaudador")
+	}
+}
+
+# NIVEL 3
+third_level_stewardship_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = stewardship_group_type
+	desc = third_level_stewardship_decision_desc
+	selection_tooltip = third_level_stewardship_selection_tooltip
+	effect_tooltip = third_level_stewardship_effect_tooltip
+	confirm_text = third_level_stewardship_confirm_text
+	ai_check_frequency = 0
+
+
+	is_shown = {
+		has_trait = education_stewardship_3
+		NOT = { has_trait = education_stewardship_4 }
+	}
+	is_valid = {
+		stewardship >= 16
+		has_lifestyle = stewardship_lifestyle
+	}
+	cost = {
+		gold = 400
+	}
+	effect = {
+		remove_trait = education_stewardship_3
+		add_trait = education_stewardship_4
+		trigger_event = { id = stewardship_event_3.100 }
+		# TODO: Añadir artefacto intermedio de administración (por ejemplo, "Balanza de Oro")
+	}
+}
+
+# NIVEL 4
+fourth_level_stewardship_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/teach.dds"
+	}
+	decision_group_type = stewardship_group_type
+	desc = fourth_level_stewardship_decision_desc
+	selection_tooltip = fourth_level_stewardship_selection_tooltip
+	effect_tooltip = fourth_level_stewardship_effect_tooltip
+	confirm_text = fourth_level_stewardship_confirm_text
+	ai_check_frequency = 0
+	is_shown = {
+		has_trait = education_stewardship_4
+		NOT = { has_trait = education_stewardship_5 }
+	}
+	is_valid = {
+		domain_size >= 6
+		stewardship >= 18
+	}
+	cost = {
+		gold = 500
+	}
+	effect = {
+		remove_trait = education_stewardship_4
+		add_trait = education_stewardship_5
+		trigger_event = { id = stewardship_event_4.100 }
+		# TODO: Añadir artefacto legendario de administración (por ejemplo, "Cetro del Orden")
+	}
+}

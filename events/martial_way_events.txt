@@ -1,0 +1,300 @@
+namespace = martial_event_1
+#evento 0 el desencadenante
+martial_event_1.100 = {
+	type = character_event
+	title = "El Primer Desafío"
+	desc = "Bajo el sol abrasador, con el sudor cegando tu visión y los músculos al borde del colapso, te enfrentas a la primera prueba de tu camino marcial. No se trata solo de fuerza física, sino de voluntad."
+	# picture = GFX_evt_training
+	override_background = armory
+	trigger = {
+		always = yes
+	}
+	immediate = {
+		add_stress = 30
+	}
+	left_portrait = {
+		character = ROOT
+		animation = idle
+	}
+	option = {
+		name = "¡No me rendiré!"
+		add_character_modifier = {
+			modifier = early_martial_training
+		}
+		add_prestige = 100
+		
+		add_martial_experience = 250
+		trigger_event = {
+			id = martial_event_1_mini.01
+			days = 30
+		}
+	}
+	option = {
+		name = "Tal vez no estoy listo..."
+		add_stress = 20
+		opinion = {
+			who = ROOT
+			modifier = opinion_disappointed_in_self
+		}
+	}
+}
+
+#mini eventos 
+namespace = martial_event_1_mini
+#obtencion de la espada y escudo
+martial_event_1_mini.01 = {
+	type = character_event
+	title = "una espada y escudo para mi"
+	desc = "Quiero mejorar mis habilidades con la espada para ello debo conseguir un arma digna de mi poder"
+	trigger = {
+		always = yes
+	}
+	left_portrait = {
+		character = root
+		animation = inspect_weapon
+	}
+	override_background = {
+		event_background = armory
+	}
+	option = {
+		name = "Me gusta esta"
+		remove_stress = 30
+		add_martial_lifestyle_xp = 25
+		create_artifact_sword_effect = {
+			OWNER = root
+		}
+		create_artifact_shield_effect = {
+			OWNER = root
+		}
+		trigger_event = {
+			id = martial_event_1_mini.02
+			days = 65
+		}
+	}
+}
+
+martial_event_1_mini.02 = {
+	type = character_event
+	title = "Una bonita armadura"
+	desc = "en mis entrenamientos me he dado cuenta que ademas de una espada y mi escudo necesito una aramadura"
+	trigger = {
+		always = yes
+	}
+	option = {
+		name = "esta se ve bien"
+		add_martial_lifestyle_xp = 25
+		create_artifact_armor_effect = {
+			OWNER = root
+		}
+		trigger_event = {
+			id = martial_event_1.101
+			days = 30
+		}
+	}
+}
+
+#evento 1
+martial_event_1.101 = {
+	type = character_event
+	title = "Fortaleza Interior"
+	desc = "Te sientas en soledad, repasando estrategias, perfeccionando la disciplina de tu mente. El entrenamiento físico es importante, pero sin control mental, todo colapsa."
+	show_as_tooltip = no
+	hidden = no
+	override_background = study
+	trigger = {
+		always = yes
+	}
+	left_portrait = {
+		character = ROOT
+		animation = celebrate_sword
+	}
+	option = {
+		name = "Mi mente es tan afilada como una lanza."
+		add_stress = 20
+		add_character_modifier = {
+			modifier = mental_martial_focus
+			years = 3
+		}
+		trigger_event = {
+			id = martial_event_mini.03
+			days = 15
+		}
+	}
+}
+
+#mini eventos obtencion del evento 1 obtencion del libro
+martial_event_mini.03 = {
+	type = character_event
+	title = "Un buen libro"
+	desc = "Buscando entre mis pertenencias encuentro un antiguo libro que adquirí en uno de mis viajes."
+	trigger = {
+		always = yes
+	}
+	option = {
+		name="Me gusta este"
+		# Crear un libro como artefacto
+		create_artifact_book_effect = {
+			OWNER = root
+		}
+		# Ganar experiencia en estilo de vida marcial
+		add_martial_lifestyle_xp = 25
+		# Probabilidad de mejorar habilidad marcial
+		# random = 0.5
+		if = {
+			limit = {
+				random = 0.5
+			}
+			add_martial_skill = 1
+		}
+		# Probabilidad de ganar un rasgo si tiene un nivel de habilidad marcial alto
+		if = {
+			limit = {
+				martial > 15
+			}
+		}
+		# random = 0.4
+		if = {
+			limit = {
+				random < 0.4
+				martial > 15
+			}
+			add_trait = strategist
+		}
+		trigger_event = {
+			id = martial_event_1.102
+			months = 1
+		}
+	}
+}
+
+# Evento 2: Prueba física
+martial_event_1.102 = {
+	type = character_event
+	title = "El Desafío Corporal"
+	desc = "Luego del entrenamiento mental, te enfrentas a una serie de pruebas físicas. Tu cuerpo es llevado al límite para forjar el guerrero que llevas dentro."
+	override_background = army_camp
+	trigger = {
+		always = yes
+	}
+	left_portrait = {
+		character = ROOT
+		animation = celebrate_sword
+	}
+	option = {
+		name = "¡Mi cuerpo está listo para la batalla!"
+		add_stress = -30
+		add_prestige = 150
+		add_character_modifier = {
+			modifier = physical_focus
+			years = 5
+		}
+		left_portrait = {
+			character = ROOT
+			animation = celebrate_sword
+		}
+		if = {
+			limit = {
+				random < 0.4
+			}
+			add_trait = strong
+		}
+		trigger_event = {
+			id = martial_event_1_mini.04
+			days = 2
+		}
+	}
+}
+
+#ganas un pequeño torneo y te dan una corona 
+martial_event_1_mini.04 = {
+	title = "Un torneo local"
+	desc = "Para llevar a cabo tu entrenamiento para fortalecer el cuerpo, te enteras de que se realizará un torneo local en [ROOT.GetCapital]"
+	trigger = {
+		always = yes
+	}
+	option = {
+		name = "Un buen desafío"
+		create_artifact_helmet_effect = {
+			OWNER = root
+		}
+		add_prestige = 5
+		add_character_modifier = {
+			modifier = win_local_tournament
+			months = 3
+		}
+		trigger_event = {
+			id = martial_event_1.103
+		}
+	}
+}
+
+martial_event_1.103 = {
+	type = character_event
+	title = "Forjando al Guerrero"
+	desc = "Tu entrenamiento se intensifica. Cada amanecer te encuentra más fuerte, pero también más agotado. Sufres, sudas, sangras. Y sin embargo, perseveras. Porque el acero del alma solo se templa con fuego."
+	hidden = no
+	override_background = army_camp
+	trigger = {
+		always = yes
+	}
+	left_portrait = {
+		character = ROOT
+		animation = celebrate_sword
+	}
+	option = {
+		name = "¡Comencemos la verdadera formación!"
+		remove_character_modifier = early_martial_training
+		add_prestige = 300
+		add_character_modifier = {
+			modifier = martial_training_focus
+		}
+	}
+}
+
+# mini eventos aparicion del maestro y desarrollo  
+namespace = martial_event_2
+martial_event_2.100 = {
+	type = character_event
+	title = "En el Frente de Guerra"
+	desc = "En el caos del campo de batalla, tus hombres luchan con una valentía feroz. La línea tiembla, y tus comandantes te observan esperando tu decisión. ¿Liderarás desde la primera línea o aprenderás desde la retaguardia?"
+	option = {
+		name = "Lideraré desde la primera línea"
+		add_prowess_skill = 1
+		if = {
+			limit = {
+				NOT = {
+					has_trait = brave
+				}
+			}
+			add_trait = brave
+		}
+		else = {
+			limit = {
+				has_trait = calm
+			}
+			add_stress = 15
+		}
+	}
+	option = {
+		name = "Observaré y aprenderé desde atrás"
+		add_learning_skill = 1
+		if = {
+			limit = {
+				has_trait = brave
+				OR = {
+					has_trait = wrathful
+				}
+			}
+			add_stress = 15
+		}
+	}
+}
+
+# #por hacer
+# martial_event_2.101 = {
+# 	type = character_event
+# 	title = "Tácticas Bajo Presión"
+# 	desc = "la batalla se complica "
+# }
+# martial_event_2.102 = {
+# }

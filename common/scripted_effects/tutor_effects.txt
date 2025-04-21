@@ -1,0 +1,194 @@
+﻿best_skill_wrapper_effect = {
+	# Diplomacy.
+	if = {
+		limit = {
+			NOR = {
+				exists = scope:diplomacy_char
+				scope:pick_1 ?= flag:diplomacy
+				scope:pick_2 ?= flag:diplomacy
+				scope:pick_3 ?= flag:diplomacy
+			}
+		}
+		ep3_laamps_1001_pick_best_skill_effect = {
+			SKILL_1 = diplomacy
+			POSITION = $POSITION$
+			SKILL_2 = martial
+			SKILL_3 = stewardship
+			SKILL_4 = intrigue
+			SKILL_5 = learning
+			SKILL_6 = prowess
+			PICK = $PICK$
+		}
+	}
+	# Martial.
+	if = {
+		limit = {
+			NOR = {
+				exists = scope:martial_char
+				scope:pick_1 ?= flag:martial
+				scope:pick_2 ?= flag:martial
+				scope:pick_3 ?= flag:martial
+			}
+		}
+		ep3_laamps_1001_pick_best_skill_effect = {
+			SKILL_1 = martial
+			POSITION = $POSITION$
+			SKILL_2 = diplomacy
+			SKILL_3 = stewardship
+			SKILL_4 = intrigue
+			SKILL_5 = learning
+			SKILL_6 = prowess
+			PICK = $PICK$
+		}
+	}
+	# Stewardship.
+	if = {
+		limit = {
+			NOR = {
+				exists = scope:stewardship_char
+				scope:pick_1 ?= flag:stewardship
+				scope:pick_2 ?= flag:stewardship
+				scope:pick_3 ?= flag:stewardship
+			}
+		}
+		ep3_laamps_1001_pick_best_skill_effect = {
+			SKILL_1 = stewardship
+			POSITION = $POSITION$
+			SKILL_2 = diplomacy
+			SKILL_3 = martial
+			SKILL_4 = intrigue
+			SKILL_5 = learning
+			SKILL_6 = prowess
+			PICK = $PICK$
+		}
+	}
+	# Intrigue.
+	if = {
+		limit = {
+			NOR = {
+				exists = scope:intrigue_char
+				scope:pick_1 ?= flag:intrigue
+				scope:pick_2 ?= flag:intrigue
+				scope:pick_3 ?= flag:intrigue
+			}
+		}
+		ep3_laamps_1001_pick_best_skill_effect = {
+			SKILL_1 = intrigue
+			POSITION = $POSITION$
+			SKILL_2 = diplomacy
+			SKILL_3 = martial
+			SKILL_4 = stewardship
+			SKILL_5 = learning
+			SKILL_6 = prowess
+			PICK = $PICK$
+		}
+	}
+	# Learning.
+	if = {
+		limit = {
+			NOR = {
+				exists = scope:learning_char
+				scope:pick_1 ?= flag:learning
+				scope:pick_2 ?= flag:learning
+				scope:pick_3 ?= flag:learning
+			}
+		}
+		ep3_laamps_1001_pick_best_skill_effect = {
+			SKILL_1 = learning
+			POSITION = $POSITION$
+			SKILL_2 = diplomacy
+			SKILL_3 = martial
+			SKILL_4 = stewardship
+			SKILL_5 = intrigue
+			SKILL_6 = prowess
+			PICK = $PICK$
+		}
+	}
+	# Prowess.
+	if = {
+		limit = {
+			NOR = {
+				exists = scope:prowess_char
+				scope:pick_1 ?= flag:prowess
+				scope:pick_2 ?= flag:prowess
+				scope:pick_3 ?= flag:prowess
+			}
+		}
+		ep3_laamps_1001_pick_best_skill_effect = {
+			SKILL_1 = prowess
+			POSITION = $POSITION$
+			SKILL_2 = diplomacy
+			SKILL_3 = martial
+			SKILL_4 = stewardship
+			SKILL_5 = intrigue
+			SKILL_6 = learning
+			PICK = $PICK$
+		}
+	}
+}
+add_courtiers_effect = {
+	# Nab our dudes.
+	add_courtier = scope:$SKILL$_1
+	add_courtier = scope:$SKILL$_2
+}
+generate_martial_char_effect = {
+	create_character = {
+		template = pool_repopulate_martial
+		dynasty = none
+		culture = root.location.culture
+		faith = root.location.faith
+		location = root.location
+		save_scope_as = martial_1
+		diplomacy = {
+			min = 10
+			max = 20
+		}
+		martial = {
+			min = 10
+			max = 20
+		}
+		stewardship = {
+			min = 10
+			max = 20
+		}
+		intrigue = {
+			min = 10
+			max = 20
+		}
+		learning = {
+			min = 10
+			max = 20
+		}
+		prowess = {
+			min = 10
+			max = 20
+		}
+		after_creation = { add_to_list = spawned_chars_list }
+	}
+}
+boost_courtier_opinion_effect = {
+	hidden_effect = {
+		# Improve their opinion of us.
+		reverse_add_opinion = {
+			target = scope:$SKILL$_1
+			modifier = respect_opinion
+			opinion = 100
+		}
+		reverse_add_opinion = {
+			target = scope:$SKILL$_2
+			modifier = respect_opinion
+			opinion = 100
+		}
+		# And, just in case, make sure we like them.
+		add_opinion = {
+			target = scope:$SKILL$_1
+			modifier = respect_opinion
+			opinion = 100
+		}
+		add_opinion = {
+			target = scope:$SKILL$_2
+			modifier = respect_opinion
+			opinion = 100
+		}
+	}
+}

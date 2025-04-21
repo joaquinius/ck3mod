@@ -1,0 +1,15 @@
+﻿
+l_spanish:
+  trait_training_way:0 "Camino del Guerrero"
+  training_way_desc:0 "Forjas cuerpo, mente y espíritu en el arte de la guerra."
+  training_way_character_desc:0 "Tu vida gira en torno a la disciplina marcial. Cada herida es una lección, cada página una táctica, cada combate un paso hacia la perfección."
+
+  trait_track_body:0 "Fortaleza Corporal"
+  trait_track_body_desc:0 "Templas tu cuerpo a través de esfuerzo constante."
+
+  trait_track_fights:0 "Dominio del Combate"
+  trait_track_fights_desc:0 "Entrenas día y noche para dominar cada arte de guerra cuerpo a cuerpo."
+
+  trait_track_study:0 "Sabiduría del Guerrero"
+  trait_track_study_desc:0 "Estudias estrategias antiguas y las tácticas de los grandes generales."
+
